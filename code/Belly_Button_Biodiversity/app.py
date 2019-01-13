@@ -85,7 +85,7 @@ def sample_metadata(sample):
 def samples(sample):
     """Return `otu_ids`, `otu_labels`,and `sample_values`."""
     stmt = db.session.query(Samples).statement
-    df = pd.read_sql_query(stmt, db.session.bind)
+    df = pd.read_sql_query(stmt, db.session.bind).sort_values(by=[str(sample)],ascending=False)
 
     # Filter the data based on the sample number and
     # only keep rows with values above 1
