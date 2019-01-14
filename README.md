@@ -7,8 +7,10 @@ This is project uses Plotly.js to build an interactive dashboard to explore the 
 
 * Pie Chart 
 ![PIE Chart](Images/pie_chart.png)
+
 * Gauge Chart 
 ![Weekly Washing Frequency Gauge](Images/gauge.png)
+
 * Bubble Chart
 ![Bubble Chart](Images/bubble_chart.png)
 
