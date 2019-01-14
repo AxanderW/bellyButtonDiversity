@@ -97,6 +97,20 @@ def samples(sample):
         "otu_labels": sample_data.otu_label.tolist(),
     }
     return jsonify(data)
+@app.route("/wfreq/<sample>")
+def sample_metadata_wfreg(sample):
+    """Return the MetaData for a given sample."""
+    sel = [
+        
+
+        Samples_Metadata.WFREQ,
+    ]
+
+    results = db.session.query(*sel).filter(Samples_Metadata.sample == sample).all()
+    new_results =  np.ravel(results)
+    return jsonify(int(new_results[0]))
+
+
 
 
 
